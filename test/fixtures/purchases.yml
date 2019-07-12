@@ -1,0 +1,21 @@
+# == Schema Information
+#
+# Table name: purchases
+#
+#  id           :bigint           not null, primary key
+#  user_id      :integer
+#  amount       :float
+#  items        :jsonb            not null
+#  ordered_from :integer
+#  currency     :integer
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+
+two:
+  user_id: 1
