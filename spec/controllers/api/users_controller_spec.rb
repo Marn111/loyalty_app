@@ -25,7 +25,7 @@ RSpec.describe Api::UsersController, type: :controller do
         expect(assigns(:user).points).to be(rose.points)
       end
 
-      let(:order_2) { create(:purchase, user_id: rose.id, ordered_from: "Thiland") }
+      let(:order_2) { create(:purchase, user_id: rose.id, ordered_from: "Thailand") }
       it 'expect to return user object with double increased points' do
         expect(response).to have_http_status(:ok)
         expect(response.content_type).to eq "application/json"

@@ -9,6 +9,7 @@
 #  origin_country :integer
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  rewards        :jsonb            not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

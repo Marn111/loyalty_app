@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_07_183153) do
+ActiveRecord::Schema.define(version: 2019_07_12_062046) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2019_07_07_183153) do
     t.integer "currency"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "collected_points", default: 0.0
     t.index ["items"], name: "index_purchases_on_items", using: :gin
   end
 
@@ -33,6 +34,8 @@ ActiveRecord::Schema.define(version: 2019_07_07_183153) do
     t.integer "origin_country"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.jsonb "rewards", default: "{}", null: false
+    t.index ["rewards"], name: "index_users_on_rewards", using: :gin
   end
 
 end
